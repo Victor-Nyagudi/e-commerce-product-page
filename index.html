@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+</head>
+<body>
+  <div class="desktop-container">
+    <nav class="navbar container">
+      <div class="logo-hamburger-container">
+        <button type="button" class="btn navbar__button navbar__button--hamburger">
+          <img src="./images/icon-menu.svg" alt="hamburger menu" class="hamburger-icon">
+        </button>
+        
+        <a href="#" class="navbar__logo">
+          <img src="./images/logo.svg" alt="the word sneakers used as a logo" class="logo">
+        </a>
+      </div>
+      
+      <ul class="navbar__links navbar__links--primary">
+        <li class="navbar__links--close">
+          <button type="button" class="btn close-menu-button">
+            <img src="./images/icon-close.svg" alt="close menu option" class="close-icon">
+          </button>
+        </li>
+
+        <li class="navbar__link-container">
+          <a href="#" class="navbar__link navbar__link--wide">
+            Collections
+          </a>
+        </li>
+        
+        <li class="navbar__link-container">
+          <a href="#" class="navbar__link">
+            Men
+          </a>
+        </li>
+        
+        <li class="navbar__link-container">
+          <a href="#" class="navbar__link">
+            Women
+          </a>
+        </li>
+        
+        <li class="navbar__link-container">
+          <a href="#" class="navbar__link">
+            About
+          </a>
+        </li>
+        
+        <li class="navbar__link-container">
+          <a href="#" class="navbar__link">
+            Contact
+          </a>
+        </li>
+      </ul>
+      
+      <ul class="navbar__links navbar__links--secondary">
+        <li class="navbar__link-container navbar__link-container--cart">
+          <button type="button" class="btn navbar__button navbar__button--cart">
+            <img src="./images/icon-cart.svg" alt="cart" class="cart-icon">
+            <span class="items-in-cart-notification" aria-live="assertive" aria-atomic="true">0</span>
+          </button>
+        </li>
+        
+        <li class="navbar__link-container navbar__link--image">
+          <a href="#" class="navbar__link navbar__link--avatar">
+            <img src="./images/image-avatar.png" alt="customer avatar" class="customer-image">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  
+    <main>
+      <section class="cart" aria-live="assertive" aria-atomic="true">
+        <h2 class="screen-reader-only">
+          Cart
+        </h2> 
+
+        <div class="cart-container">
+          <div class="cart__header">
+            <p class="cart__title container">
+              Cart
+            </p>
+          </div>
+          
+          <div class="cart__body">
+            <p class="cart__empty-message container">
+              Your cart is empty.
+            </p>
+            
+            <ul class="cart__items container"></ul>
+          </div>
+          
+          <a href="#" class="cart__checkout container">
+            Checkout
+          </a>
+        </div>
+      </section>   
+
+      <section class="info container">
+        <p class="info__intro">
+          Sneaker Company
+        </p>
+        
+        <h1 class="info__title">
+          Fall Limited Edition Sneakers
+        </h1>
+        
+        <p class="info__message">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        
+        <div class="info__pricing-details">
+          <div class="price-discount">
+            <p class="info__price">
+              $<span class="info__price--final">125.00</span> 
+            </p>
+            
+            <p class="info__discount">
+              50%
+            </p>
+          </div>
+          
+          <p class="info__original-price">
+            $250.00
+          </p>
+        </div>
+        
+        <div class="info__cta">
+          <div class="item-counter">
+            <button type="button" class="btn item-counter__button item-counter__button--minus">
+              <img src="./images/icon-minus.svg" alt="reduce button" class="minus-icon">
+            </button>
+            
+            <p class="item-counter__value" aria-live="assertive">
+              0
+            </p>
+            
+            <button type="button" class="btn item-counter__button item-counter__button--plus">
+              <img src="./images/icon-plus.svg" alt="add button" class="plus-icon">
+            </button>
+          </div>
+  
+          <button type="button" class="btn add-to-cart">
+            <img src="./images/icon-cart.svg" alt="" class="cart-icon--add" aria-hidden="true">
+            Add to cart
+          </button>
+        </div>
+      </section>
+  
+      <section class="sneakers">
+        <h2 class="screen-reader-only">
+          Sneakers Viewed From Different Angles
+        </h2>
+        
+        <div class="images">
+          <div class="images__main">
+            <button type="button" class="main-image-button main-image-button--previous">
+              <img src="./images/icon-previous.svg" alt="previous image button" class="previous-icon">
+            </button>
+            
+            <div class="main-image-container">
+              <img src="./images/image-product-1.jpg" alt="main image of white and brown sneakers" class="main-image">
+            </div>
+            
+            <button type="button" class="main-image-button main-image-button--next">
+              <img src="./images/icon-next.svg" alt="next image button" class="next-icon">
+            </button>
+          </div>
+          
+          <div class="images__previews-container">
+            <ul class="images__previews">
+              <li class="images__preview-container">
+                <button type="button" class="btn images__preview images__preview--1">
+                  <img src="./images/image-product-1-thumbnail.jpg" alt="pair of white and brown sneakers with left sneaker positioned vertically" class="preview-image">
+                </button>
+              </li>
+              
+              <li class="images__preview-container">
+                <button type="button" class="btn images__preview images__preview--2">
+                  <img src="./images/image-product-2-thumbnail.jpg" alt="pair of white and brown sneakerss with right sneaker placed on top of two stones" class="preview-image">
+                </button>
+              </li>
+              
+              <li class="images__preview-container">
+                <button type="button" class="btn images__preview images__preview--3">
+                  <img src="./images/image-product-3-thumbnail.jpg" alt="right white and brown sneaker placed on top of two stones" class="preview-image">
+                </button>
+              </li>
+              
+              <li class="images__preview-container">
+                <button type="button" class="btn images__preview images__preview--4">
+                  <img src="./images/image-product-4-thumbnail.jpg" alt="left white and brown sneaker placed on top of two stones" class="preview-image">
+                </button>
+              </li>
+            </ul>
+          </div>
+  
+        </div>
+        
+        <div class="images--lightbox">
+          <button type="button" class="btn lightbox-close-button">
+            <img src="./images/icon-close.svg" alt="close lightbox" class="lightbox-close">
+          </button>          
+
+          <div class="images__main">
+            <button type="button" class="main-image-button main-image-button--previous lightbox">
+              <img src="./images/icon-previous.svg" alt="previous image" class="previous-icon--lightbox">
+            </button>
+            
+            <div class="main-image-container--lightbox">
+              <img src="./images/image-product-1.jpg" alt="main image of white and brown sneakers" class="main-image">
+            </div>
+            
+            <button type="button" class="main-image-button main-image-button--next lightbox">
+              <img src="./images/icon-next.svg" alt="next image" class="next-icon">
+            </button>
+          </div>
+          
+          <div class="images__previews-container">
+            <ul class="images__previews lightbox">
+              <li class="images__preview-container">
+                <button type="button" class="btn images__preview images__preview--lightbox-1">
+                  <img src="./images/image-product-1-thumbnail.jpg" alt="pair of white and brown sneakers with left sneaker positioned vertically" class="preview-image--lightbox">
+                </button>
+              </li>
+              
+              <li class="images__preview-container">
+                <button type="button" class="btn images__preview images__preview--lightbox-2">
+                  <img src="./images/image-product-2-thumbnail.jpg" alt="pair of white and brown sneakerss with right sneaker placed on top of two stones" class="preview-image--lightbox">
+                </button>
+              </li>
+              
+              <li class="images__preview-container">
+                <button type="button" class="btn images__preview images__preview--lightbox-3">
+                  <img src="./images/image-product-3-thumbnail.jpg" alt="right white and brown sneaker placed on top of two stones" class="preview-image--lightbox">
+                </button>
+              </li>
+              
+              <li class="images__preview-container">
+                <button type="button" class="btn images__preview images__preview--lightbox-4">
+                  <img src="./images/image-product-4-thumbnail.jpg" alt="left white and brown sneaker placed on top of two stones" class="preview-image--lightbox">
+                </button>
+              </li>
+            </ul>
+          </div>
+  
+        </div>
+        
+      </section>
+    </main>
+  </div>
+  
+  <script src="main.js"></script>
+</body>
+</html>
