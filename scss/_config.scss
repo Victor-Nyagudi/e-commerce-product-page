@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$primary-font: 'Kumbh Sans', sans-serif;
+
+$font-weights: (
+    "regular": 400,
+    "bold": 700
+);
+
+$colors: (
+    "orange": hsl(26, 100%, 55%),
+    "pale-orange": hsl(25, 100%, 94%),
+    
+    "very-dark-blue": hsl(220, 13%, 13%),
+    "dark-grayish-blue": hsl(219, 9%, 45%),
+    
+    "grayish-blue": hsl(220, 14%, 75%),
+    "light-grayish-blue": hsl(223, 64%, 98%),
+    
+    "white": hsl(0, 0%, 100%),
+    "black": hsl(0, 0%, 0%),
+);
+
+$border-radius: 11px;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.screen-reader-only {
+    position: absolute;
+    left: -10000px;
+    
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+@function getFontWeight($weight) {
+    @return map-get($map: $font-weights, $key: $weight);
+}
+
+@function getColor($color) {
+    @return map-get($map: $colors, $key: $color);
+}
+
+@mixin lightbox {
+    // Menu opened on mobile or lightbox
+
+    .open { display: block !important; }
+
+    body {
+        &.menu-open { 
+            color: hsl(240, 5%, 25%);
+            background-color: rgb(126, 126, 126); 
+        }
+        
+        &.menu-open .navbar {
+            border-bottom: 1px solid rgb(116, 116, 116);
+        }
+        
+        &.menu-open .main-image-button:not(.main-image-button.lightbox) { 
+            background-color: rgb(114, 114, 114); 
+        }
+        
+        &.menu-open .main-image-container,
+        &.menu-open .navbar__link--image,
+        &.menu-open .images__preview:not(.images__preview--lightbox) {
+            background-color: rgb(129, 129, 129);
+            background-blend-mode: multiply;
+        }
+        
+        &.menu-open .info__intro { color: hsl(26, 91%, 27%); }
+        
+        &.menu-open .info__discount {
+            color: hsl(26, 91%, 27%);
+            background-color: hsl(26, 36%, 45%);
+        }
+        
+        &.menu-open .info__original-price { color: hsl(240, 5%, 40%); }
+        
+        &.menu-open .item-counter {
+            background-color: hsl(240, 3%, 51%);
+        }
+        
+        &.menu-open .item-counter__button { filter: brightness(50%); }
+        
+        &.menu-open .cart-icon--add { filter: brightness(130%);}
+        
+        &.menu-open .add-to-cart,
+        &.menu-open .items-in-cart {
+            color: hsl(0, 0%, 57%);
+            background-color: hsl(26, 91%, 27%);
+            box-shadow: none;
+        }
+    }
+
+    .images--lightbox { display: none; }
+}
+
+@mixin media-650 {
+    @media (min-width: 650px) {
+        @content;
+    }
+}
+
+@mixin media-900 {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin media-1250 {
+    @media (min-width: 1250px) {
+        @content;
+    }
+}

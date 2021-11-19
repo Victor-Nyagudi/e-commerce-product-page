@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css">  
+  <link rel="icon" type="image/png" sizes="32x32" href="./dist/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./dist/css/main.css">  
   <title>Frontend Mentor | E-commerce product page</title>
 
 </head>
@@ -14,18 +14,18 @@
     <nav class="navbar container">
       <div class="logo-hamburger-container">
         <button type="button" class="btn navbar__button navbar__button--hamburger">
-          <img src="./images/icon-menu.svg" alt="hamburger menu" class="hamburger-icon">
+          <img src="./dist/images/icon-menu.svg" alt="hamburger menu" class="hamburger-icon">
         </button>
         
         <a href="#" class="navbar__logo">
-          <img src="./images/logo.svg" alt="the word sneakers used as a logo" class="logo">
+          <img src="./dist/images/logo.svg" alt="the word sneakers used as a logo" class="logo">
         </a>
       </div>
       
       <ul class="navbar__links navbar__links--primary">
         <li class="navbar__links--close">
           <button type="button" class="btn close-menu-button">
-            <img src="./images/icon-close.svg" alt="close menu option" class="close-icon">
+            <img src="./dist/images/icon-close.svg" alt="close menu option" class="close-icon">
           </button>
         </li>
 
@@ -62,15 +62,15 @@
       
       <ul class="navbar__links navbar__links--secondary">
         <li class="navbar__link-container navbar__link-container--cart">
-          <button type="button" class="btn navbar__button navbar__button--cart">
-            <img src="./images/icon-cart.svg" alt="cart" class="cart-icon">
-            <span class="items-in-cart-notification" aria-live="assertive" aria-atomic="true">0</span>
+          <button type="button" class="btn navbar__button navbar__button--cart" aria-label="cart" aria-live="assertive" aria-atomic="true">
+            <img src="./dist/images/icon-cart.svg" alt="" class="cart-icon" aria-hidden="true">
+            <span class="items-in-cart-notification">0</span>
           </button>
         </li>
         
         <li class="navbar__link-container navbar__link--image">
           <a href="#" class="navbar__link navbar__link--avatar" aria-label="customer avatar">
-            <img src="./images/image-avatar.png" alt="customer avatar" class="customer-image">
+            <img src="./dist/images/image-avatar.png" alt="customer avatar" class="customer-image">
           </a>
         </li>
       </ul>
@@ -79,7 +79,7 @@
     <main>
       <section class="cart" aria-live="assertive" aria-atomic="true">
         <h2 class="screen-reader-only">
-          Cart
+          Cart items
         </h2> 
 
         <div class="cart-container">
@@ -136,7 +136,7 @@
         <div class="info__cta">
           <div class="item-counter">
             <button type="button" class="btn item-counter__button item-counter__button--minus" aria-label="reduce quantity">
-              <img src="./images/icon-minus.svg" alt="" class="minus-icon" aria-hidden="true">
+              <img src="./dist/images/icon-minus.svg" alt="" class="minus-icon" aria-hidden="true">
             </button>
             
             <p class="item-counter__value" aria-live="assertive">
@@ -144,12 +144,12 @@
             </p>
             
             <button type="button" class="btn item-counter__button item-counter__button--plus" aria-label="increase quantity">
-              <img src="./images/icon-plus.svg" alt="" class="plus-icon" aria-hidden="true">
+              <img src="./dist/images/icon-plus.svg" alt="" class="plus-icon" aria-hidden="true">
             </button>
           </div>
   
           <button type="button" class="btn add-to-cart">
-            <img src="./images/icon-cart.svg" alt="" class="cart-icon--add" aria-hidden="true">
+            <img src="./dist/images/icon-cart.svg" alt="" class="cart-icon--add" aria-hidden="true">
             Add to cart
           </button>
         </div>
@@ -163,15 +163,15 @@
         <div class="images">
           <div class="images__main">
             <button type="button" class="main-image-button main-image-button--previous" aria-label="previous image">
-              <img src="./images/icon-previous.svg" alt="" class="previous-icon" aria-hidden="true">
+              <img src="./dist/images/icon-previous.svg" alt="" class="previous-icon" aria-hidden="true">
             </button>
             
             <div class="main-image-container">
-              <img src="./images/image-product-1.jpg" alt="main image of white and brown sneakers" class="main-image">
+              <img src="./dist/images/image-product-1.jpg" alt="main image of white and brown sneakers" class="main-image">
             </div>
             
             <button type="button" class="main-image-button main-image-button--next" aria-label="next image">
-              <img src="./images/icon-next.svg" alt="" class="next-icon" aria-hidden="true">
+              <img src="./dist/images/icon-next.svg" alt="" class="next-icon" aria-hidden="true">
             </button>
           </div>
           
@@ -179,25 +179,25 @@
             <ul class="images__previews">
               <li class="images__preview-container">
                 <button type="button" class="btn images__preview images__preview--1" aria-label="first sneakers image">
-                  <img src="./images/image-product-1-thumbnail.jpg" alt="pair of white and brown sneakers with left sneaker positioned vertically" class="preview-image">
+                  <img src="./dist/images/image-product-1-thumbnail.jpg" alt="pair of white and brown sneakers with left sneaker positioned vertically" class="preview-image">
                 </button>
               </li>
               
               <li class="images__preview-container">
                 <button type="button" class="btn images__preview images__preview--2" aria-label="second sneakers image">
-                  <img src="./images/image-product-2-thumbnail.jpg" alt="pair of white and brown sneakers with right sneaker placed on top of two stones" class="preview-image">
+                  <img src="./dist/images/image-product-2-thumbnail.jpg" alt="pair of white and brown sneakers with right sneaker placed on top of two stones" class="preview-image">
                 </button>
               </li>
               
               <li class="images__preview-container">
                 <button type="button" class="btn images__preview images__preview--3" aria-label="third sneakers image">
-                  <img src="./images/image-product-3-thumbnail.jpg" alt="right white and brown sneaker placed on top of two stones" class="preview-image">
+                  <img src="./dist/images/image-product-3-thumbnail.jpg" alt="right white and brown sneaker placed on top of two stones" class="preview-image">
                 </button>
               </li>
               
               <li class="images__preview-container">
                 <button type="button" class="btn images__preview images__preview--4" aria-label="fourth sneakers image">
-                  <img src="./images/image-product-4-thumbnail.jpg" alt="left white and brown sneaker placed on top of two stones" class="preview-image">
+                  <img src="./dist/images/image-product-4-thumbnail.jpg" alt="left white and brown sneaker placed on top of two stones" class="preview-image">
                 </button>
               </li>
             </ul>
@@ -207,46 +207,46 @@
         
         <div class="images--lightbox">
           <button type="button" class="btn lightbox-close-button">
-            <img src="./images/icon-close.svg" alt="close lightbox" class="lightbox-close">
+            <img src="./dist/images/icon-close.svg" alt="close lightbox" class="lightbox-close">
           </button>          
 
           <div class="images__main">
             <button type="button" class="main-image-button main-image-button--previous lightbox" aria-label="previous image">
-              <img src="./images/icon-previous.svg" alt="" class="previous-icon--lightbox" aria-hidden="true">
+              <img src="./dist/images/icon-previous.svg" alt="" class="previous-icon--lightbox" aria-hidden="true">
             </button>
             
             <div class="main-image-container--lightbox">
-              <img src="./images/image-product-1.jpg" alt="main image of white and brown sneakers" class="main-image">
+              <img src="./dist/images/image-product-1.jpg" alt="main image of white and brown sneakers" class="main-image">
             </div>
             
             <button type="button" class="main-image-button main-image-button--next lightbox" aria-label="next image">
-              <img src="./images/icon-next.svg" alt="" class="next-icon" aria-hidden="true">
+              <img src="./dist/images/icon-next.svg" alt="" class="next-icon" aria-hidden="true">
             </button>
           </div>
           
           <div class="images__previews-container">
             <ul class="images__previews lightbox">
               <li class="images__preview-container">
-                <button type="button" class="btn images__preview images__preview--lightbox-1" aria-label="first sneakers image">
-                  <img src="./images/image-product-1-thumbnail.jpg" alt="pair of white and brown sneakers with left sneaker positioned vertically" class="preview-image--lightbox">
+                <button type="button" class="btn images__preview images__preview--lightbox images__preview--lightbox-1" aria-label="first sneakers image">
+                  <img src="./dist/images/image-product-1-thumbnail.jpg" alt="pair of white and brown sneakers with left sneaker positioned vertically" class="preview-image--lightbox">
                 </button>
               </li>
               
               <li class="images__preview-container">
-                <button type="button" class="btn images__preview images__preview--lightbox-2" aria-label="second sneakers image">
-                  <img src="./images/image-product-2-thumbnail.jpg" alt="pair of white and brown sneakers with right sneaker placed on top of two stones" class="preview-image--lightbox">
+                <button type="button" class="btn images__preview images__preview--lightbox images__preview--lightbox-2" aria-label="second sneakers image">
+                  <img src="./dist/images/image-product-2-thumbnail.jpg" alt="pair of white and brown sneakers with right sneaker placed on top of two stones" class="preview-image--lightbox">
                 </button>
               </li>
               
               <li class="images__preview-container">
-                <button type="button" class="btn images__preview images__preview--lightbox-3" aria-label="third sneakers image">
-                  <img src="./images/image-product-3-thumbnail.jpg" alt="right white and brown sneaker placed on top of two stones" class="preview-image--lightbox">
+                <button type="button" class="btn images__preview images__preview--lightbox images__preview--lightbox-3" aria-label="third sneakers image">
+                  <img src="./dist/images/image-product-3-thumbnail.jpg" alt="right white and brown sneaker placed on top of two stones" class="preview-image--lightbox">
                 </button>
               </li>
               
               <li class="images__preview-container">
-                <button type="button" class="btn images__preview images__preview--lightbox-4" aria-label="fourth sneakers image">
-                  <img src="./images/image-product-4-thumbnail.jpg" alt="left white and brown sneaker placed on top of two stones" class="preview-image--lightbox">
+                <button type="button" class="btn images__preview images__preview--lightbox images__preview--lightbox-4" aria-label="fourth sneakers image">
+                  <img src="./dist/images/image-product-4-thumbnail.jpg" alt="left white and brown sneaker placed on top of two stones" class="preview-image--lightbox">
                 </button>
               </li>
             </ul>
@@ -258,6 +258,6 @@
     </main>
   </div>
   
-  <script src="main.js"></script>
+  <script src="./dist/js/main.js"></script>
 </body>
 </html>
