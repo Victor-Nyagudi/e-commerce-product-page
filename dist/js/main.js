@@ -79,7 +79,7 @@ addToCartButton.onclick = function() {
         const item = `
             <li class="cart__item">
                 <div class="item-picture">
-                    <img src="./images/image-product-1-thumbnail.jpg" alt="white and brown sneakers" class="cart__image">
+                    <img src="./dist/images/image-product-1-thumbnail.jpg" alt="white and brown sneakers" class="cart__image">
                 </div>
                 
                 <div class="item-info">
@@ -98,7 +98,7 @@ addToCartButton.onclick = function() {
                     
                 <div class="item-delete">
                     <button type="button" class="btn delete-item-button">
-                        <img src="./images/icon-delete.svg" alt="delete item option" class="delete-icon">
+                        <img src="./dist/images/icon-delete.svg" alt="delete item option" class="delete-icon">
                     </button>
                 </div>
             </li>
@@ -143,22 +143,22 @@ imageArea.addEventListener('click', e => {
 
     for (let i = 0; i < previewImages.length; i++) {
         if (e.target.classList.contains(`images__preview--${i + 1}`))        
-            mainImage.style.backgroundImage = `url('./images/image-product-${i + 1}.jpg')`;
+            mainImage.style.backgroundImage = `url('./dist/images/image-product-${i + 1}.jpg')`;
 
         if (e.target.classList.contains(`images__preview--lightbox-${i + 1}`))
-            lightboxMainImage.style.backgroundImage = `url('./images/image-product-${i + 1}.jpg')`;
+            lightboxMainImage.style.backgroundImage = `url('./dist/images/image-product-${i + 1}.jpg')`;
     }
 
 
     if (e.target.classList.contains('main-image-button--next')) {
         if (counter <= 4 && body.offsetWidth >=  900) {
-            lightboxMainImage.style.backgroundImage = `url('./images/image-product-${counter}.jpg')`;
+            lightboxMainImage.style.backgroundImage = `url('./dist/images/image-product-${counter}.jpg')`;
             
             counter++;
         }
         
         else if (counter <= 4) {
-            mainImage.style.backgroundImage = `url('./images/image-product-${counter}.jpg')`;
+            mainImage.style.backgroundImage = `url('./dist/images/image-product-${counter}.jpg')`;
 
             counter++;
         }
@@ -168,13 +168,13 @@ imageArea.addEventListener('click', e => {
         if (counter <= 5 && counter > 2 && body.offsetWidth >= 900) {
             counter--;
             
-            lightboxMainImage.style.backgroundImage = `url('./images/image-product-${counter - 1}.jpg')`;    
+            lightboxMainImage.style.backgroundImage = `url('./dist/images/image-product-${counter - 1}.jpg')`;    
         }
 
         else if (counter <= 5 && counter > 2) {
             counter--;
             
-            mainImage.style.backgroundImage = `url('./images/image-product-${counter - 1}.jpg')`; 
+            mainImage.style.backgroundImage = `url('./dist/images/image-product-${counter - 1}.jpg')`; 
         }
     }
 

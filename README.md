@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/e-commerce-product-page-fullscreen.png)
+![](./dist/screenshots/e-commerce-product-page-fullscreen.png)
 
 I've included 4 screenshots in the `/screenshots` folder: mobile, tablet, desktop, and fullscreen.
 
@@ -53,7 +53,7 @@ JavaScript came last.
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS
 - Flexbox
 - Mobile-first workflow
 - Vanilla JS
@@ -90,13 +90,13 @@ I set the time limit for this challenge to 3 to 4 days, but some unavoidable eve
 
 Either way, I don't think I did too badly with time on here. There a couple of things I wish I figured out 
 earlier and corrected soooner, but I don't regret going on those tangents. That's how you learn and get better,
-by travelling those deadend roads and coming back wiser. 
+by travelling those dead-end roads and coming back wiser. 
 
 I don't think the JavaScript I wrote for this is very good. I believe I could've written it better, but I've
 spent so much time on this challenge already, it was time to move on. 
 
 I do hope to come back when I'm better and do some refactoring, but this will have to do for now. I need to 
-move on to a couple of other challenges I intended. The "previous" and "next" buttons were particularly
+move on to a couple of other challenges I intended to do. The "previous" and "next" buttons were particularly
 difficult for me to figure out, so I did what I could with them.
 
 I also couldn't figure out how to change the color of an image provided to me, if at all that's possible. I 
